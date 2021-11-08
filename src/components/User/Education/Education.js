@@ -15,13 +15,13 @@ const Education = ({ reff }) => {
   const education = educations.map((edu) => {
     return (
       <div key={edu._id} className="w-100 mx-auto text-center">
-        <p className="fw-bold mb-3 largeFont">
+        <h4 className="mb-1 ">
           {edu.title}
-        </p>
-        <p className="mb-3 text-primary normalFont" >
+        </h4>
+        <p className="mb-1" >
           {edu.school}, {edu.city}
         </p>
-        <p className="grey-text largeFont">
+        <p className="grey-text ">
           {convertDate(edu.startDate)} - {" "}
           {convertDate(edu.endDate)}
         </p>

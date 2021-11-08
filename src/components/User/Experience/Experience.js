@@ -19,18 +19,18 @@ const Experience = ({ reff }) => {
     return (
       <div key={exp._id} className="col-lg-12">
         <div className="row">
-          <div className="col-xl-10 col-md-11 col-10 ms-5 ">
-            <p className="normal-font fw-bold mb-2">
+          <div className="w-100 mx-auto text-center">
+            <h4 className="mb-1">
               {exp.title}
-            </p>
-            <p className="normal-font mb-1 text-primary">
+            </h4>
+            <p className="mb-1">
               {exp.company}, {exp.city}
             </p>
-            <p className="normal-font grey-text" >
+            <p className="mb-1" >
               {startDate} -{" "}
               {endDate}
             </p>
-            <p className="normal-font grey-text" >
+            <p className="mb-1" >
               {exp.description}
             </p>
             
@@ -56,7 +56,7 @@ const Experience = ({ reff }) => {
         <div className="row">
           <div className="col-12 text-center text-lg-left">
             <img
-              className="img-fluid rounded-full mb-5 d-none d-lg-inline"
+              className="img-fluid rounded-full mb-5 d-lg-inline"
               style={{width: "200px", height: "200px"}}
               src={experienceImage}
               alt="experience"

@@ -8,7 +8,7 @@ import Multifile from "../components/Admin/MultiFile/MultiFile";
 function ProjectAdmin() {
   const projects = useSelector((state) => state.projects);
   const dispatch = useDispatch();
-  const [post, setPost] = useState({excelFile: '', imageFile: ''});
+  const [post, setPost] = useState({ excelFile: '', imageFile: '' });
 
   const onSubmitEvent = async (event) => {
     event.preventDefault();
@@ -16,8 +16,10 @@ function ProjectAdmin() {
     if (post) {
       const formData = new FormData()
       formData.append('excelFile', post['excelFile'][0])
-      formData.append('imageFile', post['imageFile'])
-      console.log({excelFile: post['excelFile'], imageFile: post['imageFile']})
+      for (var x = 0; x < post['imageFile'].length; x++) {
+        formData.append("imageFile[]", post['imageFile'][x]);
+      }
+      console.log({ excelFile: post['excelFile'], imageFile: post['imageFile'] })
       console.log({ post })
       await dispatch(updateProject(formData));
     }
@@ -26,19 +28,19 @@ function ProjectAdmin() {
   const onChangeEvent = (event) => {
     let files = event.target.files
     let name = event.target.name
-    setPost({...post, [name]: files})
+    setPost({ ...post, [name]: files })
     console.log({ files, post })
   }
 
   return (
-    <div className="container w-50s mx-auto" style={{ height: "100vh" }}>
+    <div className="container w-40s mx-auto" style={{ height: "100vh" }}>
       <Table
         title="Project"
         headerText={["Title", "Technologies", "Image"]}
         headerProprities={["title", "technologies", "projectImage"]}
         tableData={projects}
       />
-      <Multifile onChangeEvent={onChangeEvent} onSubmitEvent={onSubmitEvent} fileDir="projects/updateProjects"/>
+      <Multifile onChangeEvent={onChangeEvent} onSubmitEvent={onSubmitEvent} fileDir="projects/updateProjects" />
     </div>
   );
 }

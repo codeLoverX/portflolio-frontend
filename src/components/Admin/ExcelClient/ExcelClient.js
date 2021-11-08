@@ -6,7 +6,7 @@ export default function ExcelClient({ onChangeEvent, onSubmitEvent, fileDir }) {
     <>
 
       <div className="text-left alert alert-warning my-2 my-2 alert-light" style={{ marginLeft: "-2px" }}>
-        Submit file with .xslx extension (!) and format(!) as this file.
+        Submit file with .xslx extension and format as this file.
         <a className="text-danger font-italic mx-2" href={`${baseURL}/${fileDir}/excelFile`}>
           Download
         </a>

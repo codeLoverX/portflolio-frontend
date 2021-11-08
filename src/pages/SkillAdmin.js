@@ -27,7 +27,7 @@ const SkillAdmin = () => {
 
   return (
     <div className="skill" >
-      <div className="container w-50s mx-auto" style={{ height: "100vh" }}>
+      <div className="container w-40s mx-auto" style={{ height: "100vh" }}>
         <Table
           title="Skill"
           headerText={["Name", "Level"]}

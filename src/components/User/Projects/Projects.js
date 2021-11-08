@@ -15,32 +15,28 @@ const Projects = ({ reff }) => {
   const project = projects.map((proj) => {
     return (
       <div key={proj._id} className="col-lg-12">
-        <div className="view overlay rounded z-depth-1">
-          <img
-            href={baseURL + '/uploads/' + proj.projectImage}
-            alt={proj.title}
-          />
-        </div>
+        <img
+          src={`${baseURL}/uploads/projects/${proj.projectImage}`}
+          alt={proj.title}
+          style={{ maxWidth: "30vw" }}
+        />
         <div className="row">
           <div className="text-left">
-            <p className="normal-font fw-bold mb-2">
+            <h4 className="mt-3 mb-1">
               {proj.title}
-            </p>
-            <p className="normal-font grey-text" >
+            </h4>
+            <p className="mb-2 largeFont" >
               {proj.description}
             </p>
             <p
-              className="normal-font mb-1 fw-bold"
-              style={{
-                fontSize: "14px",
-                display: "inline",
-              }}
+              className="mb-2 largeFont"
             >
-              Technologies:
+              Technologies:   {proj.technologies}
             </p>
-            <p className="d-inline" style={{ fontSize: "13px" }}>
-              {" "}
-              {proj.technologies}
+            <p
+              className="mb-2 largeFont"
+            >
+              <a href={ `${proj.link}`} className="btn btn-light text-dark">View project</a>
             </p>
             <hr className="mb-4" />
           </div>
@@ -58,13 +54,14 @@ const Projects = ({ reff }) => {
     >
 
       <div className="container">
+
         <h2 className="h1-responsive font-weight-bold mb-3">Projects</h2>
         <div className="row">
           <div className="col-12 text-center text-lg-left">
 
             <img
-              className="img-fluid rounded-full mb-5 d-none d-lg-inline"
-              style={{ width: "200px", height: "200px", background: "white", borderRadius: "50%" }}
+              className="img-fluid rounded-full mb-5 d-lg-inline"
+              style={{ width: "200px", height: "200px", borderRadius: "50%" }}
               src={DevImage}
               alt="experience"
             />
@@ -73,7 +70,6 @@ const Projects = ({ reff }) => {
         </div>
       </div>
 
-  
     </section>
   );
 };

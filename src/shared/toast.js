@@ -2,6 +2,8 @@ import { toast } from "react-toastify";
 
 export const toastSuccess = (message) => {
   toast.success(message, {
+    backgroundColor: "pink",
+    color: "red",
     position: "top-right",
     autoClose: 7000,
     hideProgressBar: false,

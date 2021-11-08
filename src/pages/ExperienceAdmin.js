@@ -26,7 +26,7 @@ const ExperienceAdmin = () => {
 
   return (
     <div className="experience">
-      <div className="container w-75 mx-auto" style={{ height: "100vh" }}>
+      <div className="container w-40s mx-auto" style={{ height: "100vh" }}>
         <Table
 
           title="Experience"

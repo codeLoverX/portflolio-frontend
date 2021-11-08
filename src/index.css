@@ -1,20 +1,27 @@
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
 
-@media screen and (min-width: 601px) {
-  .largeFont {
-    font-size: 24px;
-  }
+.largeFont {
+  font-size: 18px;
 }
 
-.w-50s{
+.normalFont {
+  font-size: 16px;
+}
+
+.w-50s {
   width: 50% !important;
 }
 
-.skillbar-title, .skillbar-bar{
+
+.w-40s {
+  width: 40% !important;
+}
+
+.skillbar-title, .skillbar-bar {
   border-radius: 0% !important;
 }
 
-.skillbar-percent{
+.skillbar-percent {
   position: relative;
   right: -35px !important;
   font-weight: 900 !important;
@@ -25,35 +32,38 @@
 
 @media screen and (max-width: 700px) {
   .largeFont {
-    font-size: 18px;
+    font-size: 16px;
   }
   .w-50s {
     width: 80% !important;
   }
- .normalFont {
-    font-size: 16px;
+  .w-40s {
+    width: 80% !important;
   }
+  .normalFont {
+    font-size: 14px;
+  }
+  
 }
 
 body {
   background: #fff;
 }
 
-
 .wrapper {
   animation: scroll 70s linear infinite;
   /* background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111; */
-  background: url("./assets/images/stars.png"), #473a4e;
-  background-blend-mode:exclusion;
+  background: url("./assets/images/stars.png"), #2e2831;
+  background-blend-mode: exclusion;
   width: 100%;
-  min-height: 200vh;
+  min-height: 300vh;
   perspective: 1000px;
   perspective-origin: 50% 50%;
 }
 
 @keyframes scroll {
-   100%{
-    background-position:0px -3000px;
+  100% {
+    background-position: 0px -3000px;
   }
 }
 
@@ -63,7 +73,14 @@ body {
   }
 }
 
-a{
-  color: white !important;
+a, body, button, h1, h2, h3, h4, h5 {
+  color: #ABB6C2 !important;
+}
+
+a {
   font-weight: bold;
+}
+
+.toast {
+  background-color: #ABB6C2 !important;
 }

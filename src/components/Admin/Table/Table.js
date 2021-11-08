@@ -1,4 +1,5 @@
 import React from "react";
+import { baseURL } from "../../../apis/serverApi";
 import { convertDate } from "../../../shared/convertDate";
 function Table({
   title,
@@ -16,7 +17,7 @@ function Table({
                 convertDate(data[prop])}
               {prop === "projectImage" && (
                 <img
-                  src={data[prop]}
+                  src={baseURL + '/uploads/projects/' + data[prop]}
                   alt="project"
                   width="150px"
                 />

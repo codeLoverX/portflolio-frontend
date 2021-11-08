@@ -53,9 +53,9 @@ const Contacts = ({ reff }) => {
       <section
         ref={reff}
         id="contact"
-        className="w-50s mx-auto"
+        className="w-50s mx-auto py-3"
       >
-        <div className="container">
+        <div className="container my-2">
           <h2 className="h1-responsive font-weight-bold text-center mb-1">
             Contact
           </h2>
@@ -199,7 +199,7 @@ const Contacts = ({ reff }) => {
                     {!loading && (
                       <input
                         type="submit"
-                        className="btn btn-dark shadow-none "
+                        className="btn btn-light text-dark shadow-none "
                         value="Send"
                       />
                     )}
@@ -214,24 +214,25 @@ const Contacts = ({ reff }) => {
                   </div>
                 </div>
               </form>
-            </div>
-
-            <div className="text-center container py-2">
-              <div className="list-unstyled row mt-2 mb-5">
-                <div className="col-sm-4">
-                  <i className="fa fa-map-marker fa-lg text-light "></i>
-                  <p>Dhaka, Bangladesh</p>
-                </div>
-                <div className="col-sm-4">
-                  <i className="fa fa-phone fa-lg text-light"></i>
-                  <p>+880 1403 898489</p>
-                </div>
-                <div className="col-sm-4">
-                  <i className="fa fa-envelope fa-lg text-light"></i>
-                  <p className="mb-2">mjrrdn@gmail.com</p>
+              <div className="text-center container py-2 my-2">
+                <div className="list-unstyled row mt-2 mb-5">
+                  <div className="col-sm-4">
+                    <i className="fa fa-map-marker fa-lg text-light "></i>
+                    <p>Dhaka, Bangladesh</p>
+                  </div>
+                  <div className="col-sm-4">
+                    <i className="fa fa-phone fa-lg text-light"></i>
+                    <p>+880 1403 898489</p>
+                  </div>
+                  <div className="col-sm-4">
+                    <i className="fa fa-envelope fa-lg text-light"></i>
+                    <p className="mb-2">mjrrdn@gmail.com</p>
+                  </div>
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </section>

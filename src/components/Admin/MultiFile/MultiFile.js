@@ -5,7 +5,7 @@ export default function Multifile({ onChangeEvent, onSubmitEvent, fileDir }) {
     return (
         <>
             <div className="text-left alert alert-warning my-2 my-2 alert-light" style={{ marginLeft: "-2px" }}>
-                Submit file with .xslx extension (!) and format(!) as this file.
+                Submit file with .xslx extension and format as this file.
                 <a className="text-warning" href={`${baseURL}/${fileDir}/excelFile`}>
                     <span> Download</span>
                 </a>

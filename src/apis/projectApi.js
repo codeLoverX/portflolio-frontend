@@ -1,7 +1,8 @@
 import api from "./serverApi";
 
 export const getProjectsApi = () => {
-  return api.get("/projects/");
+  let data= api.get("/projects/");
+  return data;
 };
 
 export const updateProjectApi = async (project) => {
