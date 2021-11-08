@@ -23,7 +23,7 @@ const Skills = ({ reff }) => {
 
   return (
     <div ref={reff} className="py-3 my-3 ">
-      <div className="container w-50s mx-auto">
+      <div className="container w-40s mx-auto">
         <h2 className="h1-responsive font-weight-bold text-center mb-4">
           Skills
         </h2>
