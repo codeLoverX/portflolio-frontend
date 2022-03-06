@@ -17,6 +17,10 @@
   width: 40% !important;
 }
 
+.image-responsive {
+  max-width: 30vw;
+}
+
 .skillbar-title, .skillbar-bar {
   border-radius: 0% !important;
 }
@@ -27,6 +31,14 @@
   font-weight: 900 !important;
   color: white !important;
 }
+
+@media screen and (max-width: 100px) {
+  
+  .image-responsive {
+    max-width: 60vw;
+  }
+}
+
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 
@@ -43,7 +55,9 @@
   .normalFont {
     font-size: 14px;
   }
-  
+  .image-responsive {
+    max-width: 80vw;
+  }
 }
 
 body {

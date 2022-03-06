@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Router, Route, Switch } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import PortfolioUI from "./pages/PortfolioUI";
 import Login from "./components/User/Login/Login";
 import SideBar from "./components/Admin/SideBar/SideBar";
@@ -13,15 +13,23 @@ import SkillAdmin from "./pages/SkillAdmin";
 import isLogin from "./shared/authorization";
 import ProjectAdmin from "./pages/ProjectAdmin";
 import NotFound from "./pages/NotFound";
+import api from "./apis/serverApi";
 
 function App() {
   const [isLogged, setIsLogged] = useState(isLogin);
   const login = useSelector((state) => state.login.isLogin);
-
+  const dispatch = useDispatch();
   useEffect(() => {
     setIsLogged(isLogin);
-  }, [login]);
 
+  }, [login]);
+  async function getSkillsApi(){
+    await api.get("/skills/");
+  }
+  useEffect(() => {
+    getSkillsApi();
+    getSkillsApi();
+  }, [dispatch]);
   return (
     <div className="App">
       <div className="wrapper">

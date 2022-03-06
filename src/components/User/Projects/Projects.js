@@ -14,11 +14,11 @@ const Projects = ({ reff }) => {
 
   const project = projects.map((proj) => {
     return (
-      <div key={proj._id} className="col-lg-12">
+      <div key={proj._id} className="">
         <img
           src={`${baseURL}/uploads/projects/${proj.projectImage}`}
           alt={proj.title}
-          style={{ maxWidth: "30vw" }}
+          className = "image-responsive"
         />
         <div className="row">
           <div className="text-left">
@@ -36,7 +36,7 @@ const Projects = ({ reff }) => {
             <p
               className="mb-2 largeFont"
             >
-              <a href={ `${proj.link}`} className="btn btn-light text-dark">View project</a>
+              <a href={ `${proj.link}`} target="_blank" className="btn btn-light text-dark">View project</a>
             </p>
             <hr className="mb-4" />
           </div>
@@ -46,17 +46,50 @@ const Projects = ({ reff }) => {
     );
   });
 
+  // const project =
+
+  //   <div key={1} className="">
+  //     <img
+  //       src={DevImage}
+  //       alt="dev"
+  //       className="image-responsive"
+  //     />
+  //     <div className="row">
+  //       <div className="text-left">
+  //         <h4 className="mt-3 mb-1">
+  //           Hi          
+  //         </h4>
+  //         <p className="mb-2 largeFont" >
+  //           Bye          
+  //           </p>
+  //         <p
+  //           className="mb-2 largeFont"
+  //         >
+  //           Technologies:   Tech
+  //         </p>
+  //         <p
+  //           className="mb-2 largeFont"
+  //         >
+  //           <a href={`port`} target="_blank" className="btn btn-light text-dark">View project</a>
+  //         </p>
+  //         <hr className="mb-4" />
+  //       </div>
+  //     </div>
+  //   </div>
+
+
+
   return (
     <section
       id="projects"
       ref={reff}
-      className="text-center py-2 w-50 mx-auto"
+      className="text-center py-2  mx-auto"
     >
 
-      <div className="container">
+      <div className="">
 
         <h2 className="h1-responsive font-weight-bold mb-3">Projects</h2>
-        <div className="row">
+        <div className="">
           <div className="col-12 text-center text-lg-left">
 
             <img
