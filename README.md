@@ -3,7 +3,7 @@
 ## Technologies
 ##### MERN STACK: Mongo DB, ExpressJS, ReactJS, NodeJS.
 
-## Dependancies
+## Dependencies
  * react
  * redux
  * react-redux
